@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log and Reg</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">   
+</head>
+<style>
+    body {
+      background-image: url('static/images/ring.jpeg');
+      background-repeat: repeat;
+      /* background-attachment: fixed;  
+      background-size: cover; */
+    }
+</style>
+<body>
+    <div id="container">
+
+        <h1>Welcome to Registration and Login at "My Bench"</h1>
+            {% if messages %}
+        <ul class="messages">    
+        {% for message in messages %}    
+            <li>{{ message }}</li>    
+        {% endfor %}
+        </ul>
+        {% endif %}
+        
+        <div class="reg">
+        
+            <h2>Register</h2>
+            <form action="/register" method=POST>
+                {% csrf_token %}
+            First Name: <input type="text" name='fname'>
+            Last Name: <input type="text" name='lname'>
+            Email: <input type="text" name='email'>
+            Password: <input type="password" name='pw'>
+            Confirm Password: <input type="password" name='confpw'>
+            <input type="submit" value="Register">
+
+            </form>
+        </div>
+        <div class="log">
+            <h2>Login</h2>
+            <form action="/login" method="POST">
+                {% csrf_token %}
+                Email: <input type="text" name='email'>
+                Password: <input type="password" name='password'>
+                <input type="submit" value='Login'> 
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
