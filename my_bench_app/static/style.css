@@ -1,9 +1,10 @@
 #container{
     margin: 0px auto;
-    width: 1200px;
+    width: 1150px;
     background-repeat: repeat;
     font-family: sans-serif;
     padding: 20px;
+    
 }
 h1 {
     text-align: center;
@@ -18,17 +19,17 @@ h1 {
 .reg{
     display: inline-block;
     background-color:rgb(0, 102, 255, 0.3);
-    width: 300px;
+    width: 160px;
     height: 400px;
     border: black solid 2px;
     padding: 20px ;
     vertical-align: top;
-    margin: 75px 100px;
+    margin: 75px 80px 75px 265px;
 }
 .log{
     display: inline-block;
     background-color:rgb(0, 102, 255, 0.3);
-    width: 300px;
+    width: 160px;
     height: 400px;
     border: black solid 2px;
     padding: 20px;
@@ -38,8 +39,8 @@ h1 {
 
 .reg input{
     display: block;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 12px;
+    margin-bottom: 12px;
 }
 
 .log input{
