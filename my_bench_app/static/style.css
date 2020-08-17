@@ -42,12 +42,14 @@ h1 {
     display: block;
     margin-top: 12px;
     margin-bottom: 12px;
+    border: black solid 2px;
 }
 
 .log input{
     display: block;
     margin-top: 10px;
     margin-bottom: 10px;
+    border: black solid 2px;
 }
 
 .api{

@@ -29,7 +29,8 @@ def login(request):
         logged_user = logged_user[0]
         if bcrypt.checkpw(request.POST['password'].encode(), logged_user.password.encode()):
             print(logged_user, "logged user was signed in!")
-            request.session['name'] = logged_user.first_name
+            request.session['fname'] = logged_user.first_name
+            request.session['lname'] = logged_user.last_name
             request.session['id'] = logged_user.id
             return redirect('/home')
 

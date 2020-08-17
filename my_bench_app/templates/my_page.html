@@ -16,7 +16,7 @@
 </style>
 <body>
     <div id="container">
-        <h1>"My Bench" page of {{user.first_name}} {{user.last_name}}</h1>
+        <h1>"My Bench" page of {{request.session.fname}} {{request.session.lname}}</h1>
         <div>
             <h2>Add Photo and Bio</h2>
             <form action="/my_page/{{request.session.id}}" method="POST">
@@ -31,9 +31,6 @@
     
         <p></p>
 
-    
-
     </div>
-    
 </body>
 </html>
