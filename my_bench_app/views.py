@@ -57,6 +57,10 @@ def comm_page(request, id):
 def create_page(request):
     return render(request, 'my_page.html')
 
+def logout(request):
+    request.session.clear()
+    return redirect('/')
+
 
 
 
